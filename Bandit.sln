@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandit", "Bandit.csproj", "{66B990BC-BDC2-4686-8BD8-00AE6003605E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66B990BC-BDC2-4686-8BD8-00AE6003605E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B990BC-BDC2-4686-8BD8-00AE6003605E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B990BC-BDC2-4686-8BD8-00AE6003605E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B990BC-BDC2-4686-8BD8-00AE6003605E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C9D82D3-8E9E-4E94-8525-380C5F9446B9}
+	EndGlobalSection
+EndGlobal

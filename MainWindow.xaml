@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Try your luck." Height="450" Width="800">
     <Grid Background="#FFCA851F">
-        <TextBox HorizontalAlignment="Left" Margin="199,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="480,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontWeight="Bold" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Margin="199,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold" Background="#FF03E6F7"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold" Background="#FF03E6F7"/>
+        <TextBox HorizontalAlignment="Left" Margin="480,191,0,0" TextWrapping="NoWrap" Text="       |||" VerticalAlignment="Top" Width="120" Height="50" FontWeight="Bold" FontSize="24" Background="#FF03E6F7"/>
         <Button Content="Spin" HorizontalAlignment="Left" Height="61" Margin="611,330,0,0" VerticalAlignment="Top" Width="142" FontSize="24" FontWeight="Bold"/>
         <Label Content="Lucky Strike" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" Width="400" Height="91" FontSize="48" FontFamily="Magneto"/>
 

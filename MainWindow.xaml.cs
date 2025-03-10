@@ -19,7 +19,7 @@ namespace Bandit;
 public partial class MainWindow : Window
 {
     Random r = new();
-    int credit = 1000;
+    int credit = 100;
     public MainWindow()
     {
         InitializeComponent();
@@ -29,7 +29,13 @@ public partial class MainWindow : Window
     {
         credit -= 10;
 
-        while (credit > 0)
+        if (credit < 0)
+        {
+            NoCashLbl.Content = "You have no more credit";
+            End();
+        }
+        else
+
         {
             int a, b, c;
 
@@ -41,6 +47,11 @@ public partial class MainWindow : Window
             b = int.Parse(WindowB.Text);
             c = int.Parse(WindowC.Text);
         }
-        NoCashLbl.Content = "You have no more credit"; 
+        
+    }
+
+    private void End()
+    {
+        this.Close();
     }
 }

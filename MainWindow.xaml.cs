@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,8 +18,29 @@ namespace Bandit;
 /// </summary>
 public partial class MainWindow : Window
 {
+    Random r = new();
+    int credit = 1000;
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        credit -= 10;
+
+        while (credit > 0)
+        {
+            int a, b, c;
+
+            WindowA.Text = r.Next(1, 10).ToString();
+            WindowB.Text = r.Next(1, 10).ToString();
+            WindowC.Text = r.Next(1, 10).ToString();
+
+            a = int.Parse(WindowA.Text);
+            b = int.Parse(WindowB.Text);
+            c = int.Parse(WindowC.Text);
+        }
+        NoCashLbl.Content = "You have no more credit"; 
     }
 }

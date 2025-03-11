@@ -20,6 +20,8 @@ public partial class MainWindow : Window
 {
     Random r = new();
     int credit = 100;
+
+    
     public MainWindow()
     {
         InitializeComponent();
@@ -29,14 +31,18 @@ public partial class MainWindow : Window
     {
         credit -= 10;
 
-        if (credit < 0)
+        if (credit == 0)
         {
-            NoCashLbl.Content = "You have no more credit";
+            EndWindow endWindow = new();
+            endWindow.Show();
             End();
         }
         else
 
         {
+            WinningsLbl.Content = "";
+            CreditLbl.Content = credit.ToString();
+
             int a, b, c;
 
             WindowA.Text = r.Next(1, 10).ToString();
@@ -46,11 +52,28 @@ public partial class MainWindow : Window
             a = int.Parse(WindowA.Text);
             b = int.Parse(WindowB.Text);
             c = int.Parse(WindowC.Text);
+
+            if (a == b && b == c)
+            {
+                credit += 100;
+                WinningsLbl.Content = "Jackpot you won 100 Credits!";
+            }
+            else if (a == b || b == c )
+            {
+                credit += 50;
+                WinningsLbl.Content = "You won 50 Credits!";
+            }
+            
         }
         
     }
 
     private void End()
+    {
+        this.Close();
+    }
+
+    private void StopBtn_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
     }

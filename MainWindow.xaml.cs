@@ -58,7 +58,7 @@ public partial class MainWindow : Window
                 credit += 100;
                 WinningsLbl.Content = "Jackpot you won 100 Credits!";
             }
-            else if (a == b || b == c )
+            else if (a == b)
             {
                 credit += 50;
                 WinningsLbl.Content = "You won 50 Credits!";

@@ -14,7 +14,7 @@
         <Button Content="Start" HorizontalAlignment="Left" Margin="607,258,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Click="Button_Click"/>
         <Label x:Name="WinningsLbl" Content="" HorizontalAlignment="Center" Margin="0,299,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label x:Name="CreditLbl" Content="" HorizontalAlignment="Left" Margin="28,328,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Left" Margin="607,328,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="86" Click="StopBtn_Click"/>
+        <Button x:Name="StopBtn" Content="Exit" HorizontalAlignment="Left" Margin="607,328,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Width="86" Click="StopBtn_Click"/>
 
 
     </Grid>

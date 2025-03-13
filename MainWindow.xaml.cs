@@ -31,6 +31,7 @@ public partial class MainWindow : Window
     private void Button_Click(object sender, RoutedEventArgs e)
     {
         //PlaySimpleSound();
+        SystemSounds.Beep.Play();
         credit -= 10;
 
         if (credit == 0)
@@ -72,15 +73,18 @@ public partial class MainWindow : Window
 
     private void End()
     {
+        SystemSounds.Asterisk.Play();
         this.Close();
     }
 
     private void StopBtn_Click(object sender, RoutedEventArgs e)
     {
+        SystemSounds.Exclamation.Play();
+        End();
         this.Close();
     }
 
-    private void PlaySimpleSound()
+    static void PlaySimpleSound()
     {
         SoundPlayer simpleSound = new SoundPlayer(@"/Sounds/buttonPing.wav");
         simpleSound.Play();

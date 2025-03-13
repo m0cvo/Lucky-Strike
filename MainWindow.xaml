@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Bandit"
         mc:Ignorable="d"
         Title="Try your luck." Height="450" Width="800">
-    <Grid Margin="10" Background="#FFCA851F">
+    <Grid Margin="10" Background="Gold">
         <TextBox x:Name="WindowA" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,191,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold" Background="#FF03E6F7" BorderBrush="#FF060606"/>
         <TextBox x:Name="WindowB" TextAlignment="Center" HorizontalAlignment="Left" Margin="176,191,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="50" FontSize="24" FontWeight="Bold" Background="#FF03E6F7" BorderBrush="#FF070808"/>
         <TextBox x:Name="WindowC" TextAlignment="Center" HorizontalAlignment="Left" Margin="470,191,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="50" FontWeight="Bold" FontSize="24" Background="#FF03E6F7" BorderBrush="#FF040404"/>

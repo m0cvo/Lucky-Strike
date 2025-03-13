@@ -1,4 +1,5 @@
 ﻿
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +30,7 @@ public partial class MainWindow : Window
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
+        //PlaySimpleSound();
         credit -= 10;
 
         if (credit == 0)
@@ -76,5 +78,11 @@ public partial class MainWindow : Window
     private void StopBtn_Click(object sender, RoutedEventArgs e)
     {
         this.Close();
+    }
+
+    private void PlaySimpleSound()
+    {
+        SoundPlayer simpleSound = new SoundPlayer(@"/Sounds/buttonPing.wav");
+        simpleSound.Play();
     }
 }

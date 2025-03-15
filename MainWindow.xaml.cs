@@ -1,5 +1,6 @@
 ﻿
 using System.Media;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -58,8 +59,10 @@ public partial class MainWindow : Window
 
             if (a == b && b == c)
             {
+                string text = "Jackpot! You won!";
                 credit += 100;
                 WinningsLbl.Content = "Jackpot you won 100 Credits!";
+                Speak(text);
             }
             else if (a == b)
             {
@@ -86,7 +89,13 @@ public partial class MainWindow : Window
 
     static void PlaySimpleSound()
     {
-        SoundPlayer simpleSound = new SoundPlayer(@"/Sounds/buttonPing.wav");
+        SoundPlayer simpleSound = new SoundPlayer(@"/Sounds/ButtonPing.wav");
         simpleSound.Play();
+    }
+
+    static void Speak(string text)
+    {
+        SpeechSynthesizer synth = new SpeechSynthesizer();
+        synth.Speak(text);
     }
 }

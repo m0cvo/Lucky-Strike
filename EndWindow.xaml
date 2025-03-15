@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Bandit"
         mc:Ignorable="d"
         Title="EndWindow" Height="450" Width="800">
-    <Grid Margin="10" Background="#FFCA851F">
+    <Grid Margin="10" Background="Gold">
         <Label Content="You have no more credit" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Magneto"/>
         <Button Content="OK" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" FontSize="36" Width="166" BorderBrush="#FF0A0A0A" Click="Button_Click"/>
 

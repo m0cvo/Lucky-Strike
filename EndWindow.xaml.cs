@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,6 +27,7 @@ namespace Bandit
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SystemSounds.Asterisk.Play();
             this.Close();
         }
     }

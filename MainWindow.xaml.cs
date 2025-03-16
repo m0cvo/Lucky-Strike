@@ -20,7 +20,10 @@ namespace Bandit;
 /// </summary>
 public partial class MainWindow : Window
 {
+    // Random number generator
     Random r = new();
+
+    // Always start with 100 credits    
     int credit = 100;
 
     
@@ -31,10 +34,12 @@ public partial class MainWindow : Window
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        //PlaySimpleSound();
         SystemSounds.Beep.Play();
+
+        // Each play costs 10 credits
         credit -= 10;
 
+        // If no credits left, end the game
         if (credit == 0)
         {
             EndWindow endWindow = new();
@@ -59,9 +64,9 @@ public partial class MainWindow : Window
 
             if (a == b && b == c)
             {
-                string text = "Jackpot! You won!";
                 credit += 100;
                 WinningsLbl.Content = "Jackpot you won 100 Credits!";
+                string text = "Jackpot! You won!";
                 Speak(text);
             }
             else if (a == b)
@@ -74,6 +79,7 @@ public partial class MainWindow : Window
         
     }
 
+    // End the game
     private void End()
     {
         SystemSounds.Asterisk.Play();
@@ -87,12 +93,7 @@ public partial class MainWindow : Window
         this.Close();
     }
 
-    static void PlaySimpleSound()
-    {
-        SoundPlayer simpleSound = new SoundPlayer(@"/Sounds/ButtonPing.wav");
-        simpleSound.Play();
-    }
-
+    // Making use of the System.Speech.Synthesis namespace to announce the jackpot
     static void Speak(string text)
     {
         SpeechSynthesizer synth = new SpeechSynthesizer();

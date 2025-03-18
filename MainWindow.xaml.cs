@@ -1,4 +1,5 @@
 ﻿
+using System.Threading;
 using System.Media;
 using System.Speech.Synthesis;
 using System.Text;
@@ -34,6 +35,9 @@ public partial class MainWindow : Window
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
+        //Create a thread object.
+        Thread speechThread = new Thread(() => Speak("Jackpot! You won!"));
+
         SystemSounds.Beep.Play();
 
         // Each play costs 10 credits
@@ -66,8 +70,7 @@ public partial class MainWindow : Window
             {
                 credit += 100;
                 WinningsLbl.Content = "Jackpot you won 100 Credits!";
-                string text = "Jackpot! You won!";
-                Speak(text);
+                speechThread.Start();
             }
             else if (a == b)
             {

@@ -58,6 +58,12 @@ public partial class MainWindow : Window
 
             int a, b, c;
 
+            // Test run values. Comment out when done testing
+            //WindowA.Text = "1";
+            //WindowB.Text = "1";
+            //WindowC.Text = "1";
+
+            // Generate random numbers for the three windows
             WindowA.Text = r.Next(1, 10).ToString();
             WindowB.Text = r.Next(1, 10).ToString();
             WindowC.Text = r.Next(1, 10).ToString();

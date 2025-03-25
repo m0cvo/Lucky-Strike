@@ -76,6 +76,7 @@ public partial class MainWindow : Window
             {
                 credit += 100;
                 WinningsLbl.Content = "Jackpot you won 100 Credits!";
+                // Start the thread
                 speechThread.Start();
             }
             else if (a == b)

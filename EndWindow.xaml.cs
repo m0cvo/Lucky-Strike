@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,8 +29,17 @@ namespace Bandit
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //Create a thread object.
+            Thread speechThread = new Thread(() => Speak("Goodbye!"));
             SystemSounds.Asterisk.Play();
             this.Close();
+        }
+
+
+        static void Speak(string text)
+        {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.Speak(text);
         }
     }
 }
